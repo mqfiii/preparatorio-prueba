@@ -1,0 +1,218 @@
+/* Variables de colores (Paso 1) */
+:root {
+    --rojo: #d32f2f;
+    --gris: #9e9e9e;
+    --oscuro: #333333;
+    --fondo: #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* Barra superior */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gris);
+    padding: 15px 30px;
+    color: white;
+}
+
+.logo h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.punto-rojo {
+    color: var(--rojo);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Requisito 3 CSS */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Efecto hover suave */
+}
+
+nav a:hover {
+    color: var(--rojo);
+}
+
+.acciones-header {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-registro {
+    background-color: var(--rojo);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.btn-crear {
+    background-color: var(--oscuro);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+.btn-registro:hover, .btn-crear:hover {
+    opacity: 0.8;
+}
+
+/* Mapa */
+.seccion-mapa img {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto;
+    display: block;
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    border-bottom: 2px solid #ddd;
+}
+
+.pestanas {
+    display: flex;
+    gap: 10px;
+}
+
+.pestana {
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.pestana.activo {
+    border-bottom: 3px solid var(--rojo);
+}
+
+.buscador {
+    display: flex;
+    gap: 5px;
+}
+
+.buscador input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buscador button {
+    background-color: var(--rojo);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ordenar select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Zona de Eventos (Tarjetas) */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fondo);
+    padding: 30px;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 30%; /* Mismo ancho para las tres tarjetas */
+    border: 2px solid var(--oscuro);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 120px;
+    background-color: #ccc;
+    border-bottom: 2px solid var(--oscuro);
+}
+
+.info-tarjeta {
+    display: flex;
+    padding: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+.fecha {
+    background-color: var(--rojo);
+    color: white;
+    display: flex;
+    flex-direction: column; /* Apilar el día sobre el mes */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.dia {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mes {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.detalles-evento h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--oscuro);
+}
+
+.asistentes-container {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icono-asistente {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* Muestra la mano al pasar el mouse */
+}
